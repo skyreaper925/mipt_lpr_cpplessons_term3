@@ -25,7 +25,6 @@ public:
         array = new T[other.size_];
         for (size_t i = 0; i < size_; ++i)
             array[i] = other.array[i];
-
     }
 
     ~Array()
@@ -97,9 +96,7 @@ template<typename T>
 std::istream &operator>>(std::istream &in, const Array<T> &obj)
 {
     for (size_t i = 0; i < obj.size(); ++i)
-    {
         in >> obj.array[i];
-    }
 
     return in;
 }
