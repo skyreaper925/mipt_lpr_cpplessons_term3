@@ -37,13 +37,14 @@ set(CMAKE_CXX_STANDARD 23)
 #add_executable(string weeks/week6/string.cpp)
 #add_executable(are_we_same weeks/week6/are_we_same.cpp)
 
-add_executable(TPow labs/lab1/TPow.cpp)
-add_executable(grid labs/lab1/grid.cpp)
-add_executable(grids labs/lab1/grids.cpp)
-
+#add_executable(TPow labs/lab1/TPow.cpp)
+#add_executable(grid labs/lab1/grid.cpp)
+#add_executable(grids labs/lab1/grids.cpp)
 
 #add_executable(excepts weeks/week8/excepts.cpp)
 #add_executable(accumulate weeks/week8/accumulate.cpp)
 
 add_executable(big_half weeks/week9/big_half.cpp)
 add_executable(sum_of_two weeks/week9/sum_of_two.cpp)
+add_executable(duplicates weeks/week9/duplicates.cpp)
+add_executable(distr weeks/week9/distr.cpp)
