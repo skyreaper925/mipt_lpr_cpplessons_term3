@@ -63,3 +63,5 @@ add_executable(grids labs/lab1/grids.cpp)
 add_executable(1 weeks/week11/1.cpp)
 add_executable(2 weeks/week11/2.cpp)
 add_executable(lambda_sum weeks/week11/lambda_sum.cpp)
+
+add_executable(some_class weeks/week13/some_class.cpp)
