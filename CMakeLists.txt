@@ -60,8 +60,13 @@ add_executable(grids labs/lab1/grids.cpp)
 #add_executable(duplicates weeks/week9/duplicates.cpp)
 #add_executable(distr weeks/week9/distr.cpp)
 
-add_executable(1 weeks/week11/1.cpp)
-add_executable(2 weeks/week11/2.cpp)
+#add_executable(1 weeks/week11/1.cpp)
+#add_executable(2 weeks/week11/2.cpp)
 add_executable(lambda_sum weeks/week11/lambda_sum.cpp)
 
 add_executable(some_class weeks/week13/some_class.cpp)
+
+add_executable(1 weeks/control_work/1.cpp)
+add_executable(3 weeks/control_work/3.cpp)
+add_executable(4 weeks/control_work/4.cpp)
+add_executable(5 weeks/control_work/5.cpp)
