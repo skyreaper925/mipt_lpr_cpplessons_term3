@@ -13,9 +13,9 @@ public:
 
     [[nodiscard]] size_type get_x_size() const { return x_size; }
 
-    T &operator[](size_type y_idx, size_type x_idx) { return data[y_idx * x_size + x_idx]; }
+    T &operator[](size_type x_idx, size_type y_idx) { return data[y_idx * x_size + x_idx]; }
 
-    explicit Grid(const T &t) : data(t), y_size(1), x_size(1)
+    explicit Grid(const T &t) : data(t), x_size(1), y_size(1)
     {
         for (auto it = data, end = data + x_size * y_size; it != end; ++it)
             *it = t;
@@ -36,11 +36,11 @@ public:
             *it = t;
     }
 
-//    T operator()(size_type y_idx, size_type x_idx) const
-//    {
-//        cout << "const ()" << endl;
-//        return data[y_idx * x_size + x_idx];
-//    }
+    T operator()(size_type y_idx, size_type x_idx) const
+    {
+        cout << "const ()" << endl;
+        return data[y_idx * x_size + x_idx];
+    }
 
     T &operator()(size_type y_idx, size_type x_idx)
     {
@@ -74,10 +74,11 @@ public:
         return Proxy(data + y_idx * x_size, x_size);
     }
 
-//    Proxy operator[](size_type y_idx) const
-//    {
-//        return Proxy(data + y_idx * x_size, x_size);
-//    }
+    const Proxy operator[](size_type y_idx) const
+    {
+        cout << "const []" << endl;
+        return Proxy(data + y_idx * x_size, x_size);
+    }
 
     Grid<T> &operator=(T const &t)
     {
@@ -128,6 +129,11 @@ int main()
 //
 //    g2 = g3[1];
 //    assert(1.0f == g2(1, 1));
+
+    std::cout << "START Check\n";
+    const Grid<float> g2(3, 2, 0.0f);
+    std::cout << g2[2][1] << endl;
+    std::cout << "END Check\n";
 
     return 0;
 }

@@ -9,7 +9,7 @@ set(PROGRAM_SRCS
 )
 
 include_directories(
-        include/
+        include
 )
 
 add_executable(rational_framework ${PROGRAM_SRCS})
@@ -51,6 +51,7 @@ add_executable(tests tests.cpp)
 
 add_executable(grid labs/lab1/grid.cpp)
 add_executable(grids labs/lab1/grids.cpp)
+add_executable(main main.cpp)
 
 #add_executable(excepts weeks/week8/excepts.cpp)
 #add_executable(accumulate weeks/week8/accumulate.cpp)
