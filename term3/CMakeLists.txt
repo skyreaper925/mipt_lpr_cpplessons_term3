@@ -9,7 +9,7 @@ set(PROGRAM_SRCS
 )
 
 include_directories(
-        include/
+        include
 )
 
 add_executable(rational_framework ${PROGRAM_SRCS})
