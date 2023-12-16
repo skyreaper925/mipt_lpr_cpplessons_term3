@@ -3,18 +3,6 @@ project(mipt_lpr_cpplessons_term3)
 
 set(CMAKE_CXX_STANDARD 23)
 
-set(PROGRAM_SRCS
-        main.cpp
-        include/src/Rational.cpp
-)
-
-include_directories(
-        include
-)
-
-add_executable(rational_framework ${PROGRAM_SRCS})
-add_executable(tests tests.cpp)
-
 #add_executable(clouds weeks/week1/clouds.cpp)
 
 #add_executable(Tsort weeks/week2/Tsort.cpp)
@@ -49,10 +37,6 @@ add_executable(tests tests.cpp)
 #add_executable(string weeks/week6/string.cpp)
 #add_executable(are_we_same weeks/week6/are_we_same.cpp)
 
-add_executable(grid labs/lab1/grid.cpp)
-add_executable(grids labs/lab1/grids.cpp)
-add_executable(main main.cpp)
-
 #add_executable(excepts weeks/week8/excepts.cpp)
 #add_executable(accumulate weeks/week8/accumulate.cpp)
 
@@ -71,3 +55,5 @@ add_executable(1 weeks/control_work/1.cpp)
 add_executable(3 weeks/control_work/3.cpp)
 add_executable(4 weeks/control_work/4.cpp)
 add_executable(5 weeks/control_work/5.cpp)
+
+add_executable(unique_ptr weeks/week15/unique_ptr.cpp)
